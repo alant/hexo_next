@@ -16,11 +16,13 @@ tags:
 
 这篇文是我用 markdown 真正意义上写的第一篇。 其实一点儿 markdown 的语法都没用到， 而我知道的也就是最基本的标题那些。然而它的意义在于， 这篇文存在 github 上，github 如果倒闭了， 我还可以转到下一个版本管理的平台上。不依赖 github 提供迁移的工具。这一点很重要， 其他的平台如 msn space 如果迁移~~图片的链接~~排版会乱的话相当于之前写的都白费了。 
 
-> update: 在写这篇的时候发现 hexo 传图非常不好用， 我现在用的是本地的 markdown 编辑器 Tyora， 如果既要 Typora 里能出图， 又要 index，和点进文章里如： yourdomainname.com/2018/04/19/article-title/ 以后能出图就要依赖图窗。呃😓...没想到这么多年还是没有一个彻底的解决方案。 先用图床吧。
+> update: 在写这篇的时候发现 hexo 传图非常不好用， 我现在用的是本地的 markdown 编辑器 Tyora， 如果既要 Typora 里能出图， 又要 index 和点进文章里如： yourdomainname.com/2018/04/19/article-title/ 以后能出图就要依赖图床。呃😓...没想到这么多年还是没有一个彻底的解决方案。 先用图床吧。
 
-之前有用 Jekyll 和 Octopress， 其中 octopress 的主题最令我满意。 截图如下：
+之前有用 Jekyll 和 Octopress， 其中 octopress 的主题 greyshade 最令我满意。 截图如下：
 
 <img src="https://ws1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg" />
+
+> update: 看了下 github 上 greyshade 的例子， 基本上都被 hexo 和 next 抢走了
 
 然而， Jekyll 是 Ruby On Rails 写的， 我不熟悉 Ruby， 配置实在是搞不定。 Octopress 维护好像不是很积极了。
 

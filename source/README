@@ -1,0 +1,4 @@
+Hexo project is under src branch.
+write article locally then run: hexo server --config source/_data/next.yml to check
+run: hexo generate --config source/_data/next.yml to generate the necessary files to deploy to github
+run: hexo deploy --config source/_data/next.yml to deploy automatically to github personal page
