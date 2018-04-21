@@ -11,9 +11,9 @@ date: 2018-04-19 17:03:02
 
 重复几个桌面版有的链接：
 
-[LinkedIn][https://www.linkedin.com/in/alantang]
+[LinkedIn](https://www.linkedin.com/in/alantang)
 
-[Github][https://github.com/alant]
+[Github](https://github.com/alant)
 
 先放这两个吧， 认识的找我用微信。
 
