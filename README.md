@@ -1,10 +1,14 @@
-# alant.github.io
-This is the editing branch.
+# This is the editing branch of ahtang.com
 
-write article locally then run: hexo server --config source/_data/next.yml to check
-run: hexo generate --config source/_data/next.yml to generate the necessary files to deploy to github
-run: hexo deploy --config source/_data/next.yml to deploy automatically to github personal page
-
+Usage:
+```bash
+# write article locally then run the following to check locally
+hexo server --config source/_data/next.yml 
+# generate the necessary files to deploy to github
+hexo generate --config source/_data/next.yml
+# Deploy to github personal page:
+hexo deploy --config source/_data/next.yml
+```
 For new clones:
 ```bash
 # install all dependencies:
@@ -16,3 +20,4 @@ cd themes/next
 git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox
 # now you can run local server:
 hexo server --config source/_data/next.yml
+```
