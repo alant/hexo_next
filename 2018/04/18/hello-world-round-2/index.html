@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="引言刚要提笔却又觉得无从说起。 还是用我擅长的流水账手法吧。 从很多年前大学甚至高中开始就想有自己的个人主页。 事实是这些年确实都有。 但是由于很多原因没有坚持写。 我爸一直鼓励我多写。 而基于多年的学校教育和我对自身学习方法的认知， 如果我不记笔记， 知识就没有内化，没有充分理解。 写到这里，我想起了大学毕业的一个小遗憾。 当时从比利时搬家回上海， 为了轻车简从，把大学期间打印的讲义和笔记都扔掉">
+<meta name="keywords" content="产品经理，软件工程师，区块链，互联网，流量变现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="世界你好">
+<meta property="og:url" content="http://ahtang.com//2018/04/18/hello-world-round-2/index.html">
+<meta property="og:site_name" content="汤包个人页">
+<meta property="og:description" content="引言刚要提笔却又觉得无从说起。 还是用我擅长的流水账手法吧。 从很多年前大学甚至高中开始就想有自己的个人主页。 事实是这些年确实都有。 但是由于很多原因没有坚持写。 我爸一直鼓励我多写。 而基于多年的学校教育和我对自身学习方法的认知， 如果我不记笔记， 知识就没有内化，没有充分理解。 写到这里，我想起了大学毕业的一个小遗憾。 当时从比利时搬家回上海， 为了轻车简从，把大学期间打印的讲义和笔记都扔掉">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg">
+<meta property="og:updated_time" content="2018-09-14T04:16:55.367Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="世界你好">
+<meta name="twitter:description" content="引言刚要提笔却又觉得无从说起。 还是用我擅长的流水账手法吧。 从很多年前大学甚至高中开始就想有自己的个人主页。 事实是这些年确实都有。 但是由于很多原因没有坚持写。 我爸一直鼓励我多写。 而基于多年的学校教育和我对自身学习方法的认知， 如果我不记笔记， 知识就没有内化，没有充分理解。 写到这里，我想起了大学毕业的一个小遗憾。 当时从比利时搬家回上海， 为了轻车简从，把大学期间打印的讲义和笔记都扔掉">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://ahtang.com//2018/04/18/hello-world-round-2/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>世界你好 | 汤包个人页</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2155923-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2155923-2');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">汤包个人页</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ahtang.com//2018/04/18/hello-world-round-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="汤包个人页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">世界你好
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-04-19 00:26:39" itemprop="dateCreated datePublished" datetime="2018-04-19T00:26:39+08:00">2018-04-19</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>刚要提笔却又觉得无从说起。 还是用我擅长的流水账手法吧。 从很多年前大学甚至高中开始就想有自己的个人主页。 事实是这些年确实都有。 但是由于很多原因没有坚持写。 我爸一直鼓励我多写。 而基于多年的学校教育和我对自身学习方法的认知， 如果我不记笔记， 知识就没有内化，没有充分理解。 写到这里，我想起了大学毕业的一个小遗憾。 当时从比利时搬家回上海， 为了轻车简从，把大学期间打印的讲义和笔记都扔掉了， 堆砌起来目测可能有将近一立方米， 可惜没有照片，现在也是口说无凭。 只能作为永远的遗憾和后辈们引以为鉴的教训了。 </p>
+<p>一直没有去写的另一个原因是， 写的东西都零散的散落在互联网的各个阴暗角落。 从 blogger 到 msn space 再到简书。互联网告诉我们，没有任何的平台是永生的。 那为什么要为了这种转瞬即逝的东西去耗费时间精力去写呢？</p>
+<p>很惭愧，作为一个科班出身的人， 一直到最近我才开始较频繁的使用程序员神器之一 github。 发现这么些年来， 加入版本管理和云存储的东西永生的几率是最大的。 移动硬盘可能摔坏， 优盘可能丢失。 </p>
+<p>长久以来我都想把写的东西弄到版本管理里去。 直到现在才有时间去梳理这些一直想做却因为时间和借口没有做的事情。</p>
+<p>这篇文是我用 markdown 真正意义上写的第一篇。 其实一点儿 markdown 的语法都没用到， 而我知道的也就是最基本的标题那些。然而它的意义在于， 这篇文存在 github 上，github 如果倒闭了， 我还可以转到下一个版本管理的平台上。不依赖 github 提供迁移的工具。这一点很重要， 其他的平台如 msn space 如果迁移<del>图片的链接</del>排版会乱的话相当于之前写的都白费了。 </p>
+<blockquote>
+<p>update: 在写这篇的时候发现 hexo 传图非常不好用， 我现在用的是本地的 markdown 编辑器 Tyora， 如果既要 Typora 里能出图， 又要 index 和点进文章里如： yourdomainname.com/2018/04/19/article-title/ 以后能出图就要依赖图床。呃😓…没想到这么多年还是没有一个彻底的解决方案。 先用图床吧。</p>
+</blockquote>
+<p>之前有用 Jekyll 和 Octopress， 其中 octopress 的主题 greyshade 最令我满意。 截图如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg"></p>
+<blockquote>
+<p>update: 看了下 github 上 greyshade 的例子， 基本上都被 hexo 和 next 抢走了</p>
+</blockquote>
+<p>然而， Jekyll 是 Ruby On Rails 写的， 我不熟悉 Ruby， 配置实在是搞不定。 Octopress 维护好像不是很积极了。</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>最近发现基于 node.js 的 Hexo， 还有这个主题 next。基于 js 的还是比基于 Ruby 的好上手得多。 两个项目的维护好像都还比较及时。 以后可能还会换静态页面的解决方案， 但是， 文章都会一直用 github 保存下去。 我很满意。</p>
+<h2 id="区块链-Hackathon"><a href="#区块链-Hackathon" class="headerlink" title="区块链 Hackathon"></a>区块链 Hackathon</h2><p>最近在看区块链的机会， 6 月 9 号在北京有一个 SegmentFault 办的 hackathon， 我组了个队， 背景都是硅谷海归，还有 2-3 个参队名额。 希望有时间有兴趣的小伙伴联系我一起玩一下。 </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/21/一个简单的以太坊智能合约开发练习/" rel="prev" title="一个简单的以太坊智能合约开发练习">
+                一个简单的以太坊智能合约开发练习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Alan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.linkedin.com/in/alantang" target="_blank" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/alant" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://stackoverflow.com/users/3781358/alant" target="_blank" title="StackOverflow"><i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/tang-hao-3" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">2.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区块链-Hackathon"><span class="nav-number">3.</span> <span class="nav-text">区块链 Hackathon</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alan</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
