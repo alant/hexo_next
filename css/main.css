@@ -2516,7 +2516,7 @@ ul.breadcrumb li:last-child {
   }
 }
 .site-brand-container {
-  background: #222;
+  background: #004b64;
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
@@ -2525,6 +2525,8 @@ ul.breadcrumb li:last-child {
 }
 .site-meta {
   padding: 20px 0;
+  color: #fff;
+  background: #004b64;
 }
 .brand {
   padding: 0;
