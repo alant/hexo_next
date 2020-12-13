@@ -20,7 +20,7 @@ tags:
 
 之前有用 Jekyll 和 Octopress， 其中 octopress 的主题 greyshade 最令我满意。 截图如下：
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg" />
+<img src="https://ww1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg" />
 
 > update: 看了下 github 上 greyshade 的例子， 基本上都被 hexo 和 next 抢走了
 
