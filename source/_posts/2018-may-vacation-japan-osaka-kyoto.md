@@ -48,7 +48,7 @@ Hotel Brighton City Osaka Kitahama 退房
 <img src="https://ww3.sinaimg.cn/large/006tKfTcly1fqzpxtnj6yj31kw16pe81.jpg" />
 
 后面几道就不一一报菜名了（其实有些可能也说不上来）直接上图吧：
-
+<!--more-->
 <img src="https://ww4.sinaimg.cn/large/006tKfTcly1fqzpxq3903j31kw16okjl.jpg" />
 
 <img src="https://ww1.sinaimg.cn/large/006tKfTcly1fqzpxss2k6j31kw16o7wi.jpg" />
