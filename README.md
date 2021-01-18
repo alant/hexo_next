@@ -1,23 +1,15 @@
 # This is the editing branch of ahtang.com
 
+Next theme recommends using _config.[theme].yml in root dir.
+
 Usage:
 ```bash
 # write article locally then run the following to check locally
-hexo server --config source/_data/next.yml 
+hexo server 
 # generate the necessary files to deploy to github
-hexo generate --config source/_data/next.yml
+hexo generate
 # Deploy to github personal page:
-hexo deploy --config source/_data/next.yml
+hexo deploy
 ```
-For new clones:
-```bash
-# install all dependencies:
-npm i 
-# install the theme called next
-git clone https://github.com/theme-next/hexo-theme-next themes/next
-# install dependency fancybox 
-cd themes/next
-git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox
-# now you can run local server:
-hexo server --config source/_data/next.yml
-```
+
+Adsense head tag is added to _data/head.njk file. Thus, for new clones, need to uncommend head of custom_file_path in themes/next/_config.yml file.
