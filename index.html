@@ -325,7 +325,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/05/03/2018-may-vacation-japan-osaka-kyoto/">
+    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/05/03/201805-osaka-kyoto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -342,7 +342,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/05/03/2018-may-vacation-japan-osaka-kyoto/" class="post-title-link" itemprop="url">2018年五一假期日本大阪京都奈良6日游</a>
+            <a href="/2018/05/03/201805-osaka-kyoto/" class="post-title-link" itemprop="url">2018年五一假期日本大阪京都奈良6日游</a>
         </h2>
 
         <div class="post-meta-container">
@@ -375,16 +375,13 @@
 <p>####详细</p>
 <p>上午睡了个懒觉，收拾好退房以后英明决定带着行李去心斋桥，行李寄存地铁，然后在心斋桥逛街。结果 700 日元的最大号柜子被人占了，只好租 500 日元第二大的柜子，发挥智慧硬塞了两个登机箱进去。 </p>
 <p>出站后觉得应该先吃午饭，在点评上看中了家餐馆叫銀や， 结果跑到门口看到贴纸说五一长假不开/(ㄒoㄒ)/~~。 后来又看到一家大和屋，在大丸百货的 13 层。 这时才发现我们的箱子其实是存在地铁四ツ橋站了。。。心斋桥和四ツ橋站在地下有通道是通的。。。</p>
-<p>大丸百货都是高级牌子， 大和屋门口站的是和服服务员， 门口装修讲究， 差点没敢进去。 但是想想既然来了， 吃吧😝。 两人含税约人民币￥810.6 </p>
-<img src="https://ww1.sinaimg.cn/large/006tKfTcly1fqzq1yvdlwj31kw23vu0x.jpg" />
-
+<p>大丸百货都是高级牌子， 大和屋门口站的是和服服务员， 门口装修讲究， 差点没敢进去。 但是想想既然来了， 吃吧😝。 两人含税约人民币￥810.6<br><img src="/2018/05/03/201805-osaka-kyoto/receipt.jpg"></p>
 <p>第一道是海胆，鲍鱼刺身</p>
-<img src="https://ww3.sinaimg.cn/large/006tKfTcly1fqzpxtnj6yj31kw16pe81.jpg" />
-
+<p><img src="/2018/05/03/201805-osaka-kyoto/abalone.jpg"></p>
 <p>后面几道就不一一报菜名了（其实有些可能也说不上来）直接上图吧：</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/05/03/2018-may-vacation-japan-osaka-kyoto/#more" rel="contents">
+              <a class="btn" href="/2018/05/03/201805-osaka-kyoto/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -410,7 +407,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/21/solidity-smart-contract/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -427,7 +424,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/" class="post-title-link" itemprop="url">一个简单的以太坊智能合约开发练习</a>
+            <a href="/2018/04/21/solidity-smart-contract/" class="post-title-link" itemprop="url">一个简单的以太坊智能合约开发练习</a>
         </h2>
 
         <div class="post-meta-container">
@@ -460,12 +457,11 @@
 <p>第一行 pragma solidity ^0.4.18; 是给编译器看的， 意思是用 0.4.18 版本以上的 solidity 编译器， 基本可以忽略。 后面的智能合约，如有任何现代语言的编程基础的话还是比较好懂的。 谁通过创造器（constructor）创造了合约谁就是一号玩家 playerA， playerA 和 playerB 的类型都是 address，根据 solidity 的<a target="_blank" rel="noopener" href="https://solidity.readthedocs.io/en/develop/types.html#address">官方文档</a>，address 是一个 20 个字节放以太坊地址的类型。</p>
 <p>合约创造以后，二号玩家可以调用 registerAnOpponent() 来注册。 require(playerB == address(0)); 的意思是要求二号玩家还没有被注册过（地址为 0）。合约的主体是 wrestle()，payable 的意思是这个方法可以接受付款。 后面的代码就是实现上面说的游戏的逻辑。 语法和现代语言 （java，javascript，python）基本没有什么区别。 </p>
 <p>至此， 智能合约的开发第一步就完成了， 神奇吧。 你可以把以上的代码复制粘贴到 solidity 的 IDE 中：<a target="_blank" rel="noopener" href="http://remix.ethereum.org/">http://remix.ethereum.org/</a>。然后点击 start to compile，一切顺利的话，你能看到 Wrestling 是绿色的， 表示编译没问题。如下图所示：</p>
-<img src="https://ww4.sinaimg.cn/large/006tNc79ly1fqlhicpf8bj30v40dl77d.jpg" />
-
+<p><img src="/2018/04/21/solidity-smart-contract/remix.jpg"></p>
 <p>到这里其实合约还有一个问题。 就是如果赢了的话，奖金如何取出来？我们需要加一个取钱的方法：</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/#more" rel="contents">
+              <a class="btn" href="/2018/04/21/solidity-smart-contract/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -541,8 +537,7 @@
 <p>update: 在写这篇的时候发现 hexo 传图非常不好用， 我现在用的是本地的 markdown 编辑器 Tyora， 如果既要 Typora 里能出图， 又要 index 和点进文章里如： yourdomainname.com/2018/04/19/article-title/ 以后能出图就要依赖图床。呃😓…没想到这么多年还是没有一个彻底的解决方案。 先用图床吧。</p>
 </blockquote>
 <p>之前有用 Jekyll 和 Octopress， 其中 octopress 的主题 greyshade 最令我满意。 截图如下：</p>
-<img src="https://ww1.sinaimg.cn/large/006tKfTcly1fqi0w67te1j30vf0i2gpa.jpg" />
-
+<p><img src="/2018/04/18/hello-world-round-2/jekyll-octopress.jpg"></p>
 <blockquote>
 <p>update: 看了下 github 上 greyshade 的例子， 基本上都被 hexo 和 next 抢走了</p>
 </blockquote>

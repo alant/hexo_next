@@ -26,24 +26,24 @@
   <meta name="description" content="以太坊 V 神在一个采访中说过， 世界上现在分成两种人， 一种是知道什么是比特币的， 一种是不知道的。 对于知道什么是比特币的人， 解释以太坊是什么要相对容易一些。 就是比特币基础上再加了一个智能合约。 对于不知道什么是比特币的， 可以先在网上科普一下。  最近几天把 hackernoon 上面的一篇以太坊智能合约开发指南教程跑了一遍。 开发的例子灵感是来自于一部电影时间规划局。 一部褒贬不一的电">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个简单的以太坊智能合约开发练习">
-<meta property="og:url" content="http://ahtang.com/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:url" content="http://ahtang.com/2018/04/21/solidity-smart-contract/index.html">
 <meta property="og:site_name" content="汤包个人页">
 <meta property="og:description" content="以太坊 V 神在一个采访中说过， 世界上现在分成两种人， 一种是知道什么是比特币的， 一种是不知道的。 对于知道什么是比特币的人， 解释以太坊是什么要相对容易一些。 就是比特币基础上再加了一个智能合约。 对于不知道什么是比特币的， 可以先在网上科普一下。  最近几天把 hackernoon 上面的一篇以太坊智能合约开发指南教程跑了一遍。 开发的例子灵感是来自于一部电影时间规划局。 一部褒贬不一的电">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNc79ly1fqlhicpf8bj30v40dl77d.jpg">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNc79ly1fqll8yw1u6j30fv0ey0vs.jpg">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNc79ly1fqp4zomgtqj30fy08ktah.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79ly1fqp4zp1u2zj30gh0gsjtt.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79ly1fqp6ez4ysgj30fu02lmxp.jpg">
+<meta property="og:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/remix.jpg">
+<meta property="og:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/terminal-ganache.jpg">
+<meta property="og:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/terminal-truffle-migrate.jpg">
+<meta property="og:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/terminal-ganache2.jpg">
+<meta property="og:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/terminal-truffle-console.jpg">
 <meta property="article:published_time" content="2018-04-22T06:40:19.000Z">
-<meta property="article:modified_time" content="2021-01-02T03:56:32.863Z">
+<meta property="article:modified_time" content="2021-02-15T23:16:30.130Z">
 <meta property="article:author" content="Alan">
 <meta property="article:tag" content="产品经理，软件工程师，区块链，互联网，流量变现">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ww4.sinaimg.cn/large/006tNc79ly1fqlhicpf8bj30v40dl77d.jpg">
+<meta name="twitter:image" content="http://ahtang.com/2018/04/21/solidity-smart-contract/remix.jpg">
 
 
-<link rel="canonical" href="http://ahtang.com/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/">
+<link rel="canonical" href="http://ahtang.com/2018/04/21/solidity-smart-contract/">
 
 
 <script class="page-configurations">
@@ -241,7 +241,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/21/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91%E7%BB%83%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/21/solidity-smart-contract/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -290,8 +290,7 @@
 <p>第一行 pragma solidity ^0.4.18; 是给编译器看的， 意思是用 0.4.18 版本以上的 solidity 编译器， 基本可以忽略。 后面的智能合约，如有任何现代语言的编程基础的话还是比较好懂的。 谁通过创造器（constructor）创造了合约谁就是一号玩家 playerA， playerA 和 playerB 的类型都是 address，根据 solidity 的<a target="_blank" rel="noopener" href="https://solidity.readthedocs.io/en/develop/types.html#address">官方文档</a>，address 是一个 20 个字节放以太坊地址的类型。</p>
 <p>合约创造以后，二号玩家可以调用 registerAnOpponent() 来注册。 require(playerB == address(0)); 的意思是要求二号玩家还没有被注册过（地址为 0）。合约的主体是 wrestle()，payable 的意思是这个方法可以接受付款。 后面的代码就是实现上面说的游戏的逻辑。 语法和现代语言 （java，javascript，python）基本没有什么区别。 </p>
 <p>至此， 智能合约的开发第一步就完成了， 神奇吧。 你可以把以上的代码复制粘贴到 solidity 的 IDE 中：<a target="_blank" rel="noopener" href="http://remix.ethereum.org/">http://remix.ethereum.org/</a>。然后点击 start to compile，一切顺利的话，你能看到 Wrestling 是绿色的， 表示编译没问题。如下图所示：</p>
-<img src="https://ww4.sinaimg.cn/large/006tNc79ly1fqlhicpf8bj30v40dl77d.jpg" />
-
+<p><img src="/2018/04/21/solidity-smart-contract/remix.jpg"></p>
 <p>到这里其实合约还有一个问题。 就是如果赢了的话，奖金如何取出来？我们需要加一个取钱的方法：</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function withDraw() public &#123;</span><br><span class="line">  require(gameOver &amp;&amp; msg.sender &#x3D;&#x3D; theWinner);</span><br><span class="line">  uint amount &#x3D; prize;</span><br><span class="line">  prize &#x3D; 0;</span><br><span class="line">  msg.sender.transfer(amount);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -324,18 +323,15 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ganache-cli -p 7545</span><br></pre></td></tr></table></figure>
 
 <p>会产生 10 个以太坊账号，每个里面有 100 个 Ether。 效果如下：</p>
-<img src="https://ww4.sinaimg.cn/large/006tNc79ly1fqll8yw1u6j30fv0ey0vs.jpg">
-
+<p><img src="/2018/04/21/solidity-smart-contract/terminal-ganache.jpg"></p>
 <p>然后编译和部署合约到上面这个假以太坊网络中去，保留上面的终端， 开一个命令在项目的根目录处执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">truffle compile</span><br><span class="line">truffle migrate --network development</span><br></pre></td></tr></table></figure>
 
 <p>第一句话是编译合约，作用和上面 remix IDE 里有的编译功能是一样的， 第二句话是将编译好的合约部署到测试网上。测试网的参数在 ”truffle.js” 上配好了。</p>
 <p>部署后执行 truffle 的终端显示如下：</p>
-<img src="https://ww4.sinaimg.cn/large/006tNc79ly1fqp4zomgtqj30fy08ktah.jpg" />
-
+<p><img src="/2018/04/21/solidity-smart-contract/terminal-truffle-migrate.jpg"></p>
 <p>ganache 的终端显示如下：</p>
-<img src="https://ww1.sinaimg.cn/large/006tNc79ly1fqp4zp1u2zj30gh0gsjtt.jpg" />
-
+<p><img src="/2018/04/21/solidity-smart-contract/terminal-ganache2.jpg"></p>
 <p>值得注意的是上面两个终端里 Wresling: 0x… 和 contract created: 0x… 的地址是一致的。</p>
 <p>细心的同学会注意到 Gas usage，以太坊上的运算和交易都需要付旷工费。具体 gas 怎么算可以上网查一下， 有不少相关的中文资料。</p>
 <p>接下来可以和部署好的合约互动了。 在 truffle 的终端输入以下命令：</p>
@@ -344,8 +340,7 @@
 <p>第一步可以查一下账户的余额：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web3.fromWei(web3.eth.getBalance(web3.eth.accounts[1]))</span><br></pre></td></tr></table></figure>
 
-<img src="https://ww1.sinaimg.cn/large/006tNc79ly1fqp6ez4ysgj30fu02lmxp.jpg" />
-
+<p><img src="/2018/04/21/solidity-smart-contract/terminal-truffle-console.jpg"></p>
 <p>合约是默认 accounts[0] 部署的，ganache 默认的 gas price 是 100,000,000,000 或者 100 gwei，部署这个合约花掉了 1,068,066 的 gas。加上余额，就能对上每个账号默认 100 个 ether 的量了。</p>
 <p>接下来就可以开始调用合约的方法了：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">playerA = web3.eth.accounts[0]</span><br><span class="line">playerB = web3.eth.accounts[1]</span><br><span class="line">Wrestling.deployed().<span class="keyword">then</span>(inst =&gt; &#123; WrestlingInstance = inst &#125;)</span><br><span class="line">WrestlingInstance.registerAsAnOpponent(&#123;from: playerB&#125;)</span><br><span class="line">WrestlingInstance.wrestle(&#123;from: playerA, value: web3.toWei(2, <span class="string">&quot;ether&quot;</span>)&#125;)</span><br><span class="line">WrestlingInstance.wrestle(&#123;from: playerB, value: web3.toWei(3, <span class="string">&quot;ether&quot;</span>)&#125;)</span><br><span class="line">WrestlingInstance.wrestle(&#123;from: playerA, value: web3.toWei(5, <span class="string">&quot;ether&quot;</span>)&#125;)</span><br><span class="line">WrestlingInstance.wrestle(&#123;from: playerB, value: web3.toWei(20, <span class="string">&quot;ether&quot;</span>)&#125;)</span><br></pre></td></tr></table></figure>
@@ -370,7 +365,7 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018/05/03/2018-may-vacation-japan-osaka-kyoto/" rel="next" title="2018年五一假期日本大阪京都奈良6日游">
+                <a href="/2018/05/03/201805-osaka-kyoto/" rel="next" title="2018年五一假期日本大阪京都奈良6日游">
                   2018年五一假期日本大阪京都奈良6日游 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
