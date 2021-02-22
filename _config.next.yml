@@ -4,10 +4,10 @@
 
 # Site
 title: 汤包个人页
-subtitle:
+subtitle: 走过很多弯路的程序员
 description:
 # keywords:
-author: Alan
+author: 
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -181,8 +181,8 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  about: /about/ || user
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
   #tags: /tags/ || tags
   #categories: /categories/ || th
   #archives: /archives/ || archive
@@ -200,10 +200,10 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-#scheme: Mist
+# scheme: Muse
+# scheme: Mist
 scheme: Pisces
-#scheme: Gemini
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -216,8 +216,8 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  LinkedIn: https://www.linkedin.com/in/alantang || linkedin
-  GitHub: https://github.com/alant || github
+  LinkedIn: https://www.linkedin.com/in/alantang || fab fa-linkedin
+  GitHub: https://github.com/alant || fab fa-github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
