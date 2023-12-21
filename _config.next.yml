@@ -558,7 +558,7 @@ needmoreshare2:
 
 # Google Analytics
 google_analytics:
-  tracking_id: UA-2155923-2
+  tracking_id: G-2C6GZ60BVJ
   only_pageview: false
 
 # Bing Webmaster tools verification setting
