@@ -13,14 +13,11 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-
-<script class="hexo-configurations">
+<script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ahtang.com","root":"/","scheme":"Pisces","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"ahtang.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -31,11 +28,10 @@
 <meta property="article:tag" content="产品经理，软件工程师，区块链，互联网，流量变现">
 <meta name="twitter:card" content="summary">
 
-
 <link rel="canonical" href="http://ahtang.com/">
 
 
-<script class="page-configurations">
+<script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -47,15 +43,6 @@
 
   <title>汤包个人页</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2C6GZ60BVJ"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-2C6GZ60BVJ');
-      }
-    </script>
 
 
 
@@ -64,61 +51,49 @@
 
   <noscript>
   <style>
-  body { margin-top: 2rem; }
-
+  .use-motion .brand,
   .use-motion .menu-item,
-  .use-motion .sidebar,
+  .sidebar-inner,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
+  .use-motion .site-subtitle {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
+      <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">汤包个人页</h1>
-      <i class="logo-line"></i>
+      <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">走过很多弯路的程序员</p>
   </div>
@@ -131,16 +106,17 @@
 
 
 
+
 <nav class="site-nav">
-  <ul class="main-menu menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>文章</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -150,65 +126,6 @@
 
 
 </div>
-        
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-      </section>
-      <!--/noindex-->
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt=""
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name"></p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-name">文章数量</span>
-          <span class="site-state-item-count">4</span>
-        </a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://www.linkedin.com/in/alantang" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;alantang" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://github.com/alant" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;alant" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-
-
-
-      </section>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
     </header>
 
     
@@ -217,15 +134,14 @@
     <span>0%</span>
   </div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-    <div class="main-inner index posts-expand">
-      
-
-      
+          <div class="content index posts-expand">
+            
       
   
   
@@ -233,7 +149,7 @@
     <link itemprop="mainEntityOfPage" href="http://ahtang.com/2019/08/13/%E9%9D%A2%E8%AF%95%E5%88%B7%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
     </span>
@@ -241,28 +157,30 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="汤包个人页">
     </span>
-
-    
-    
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
             <a href="/2019/08/13/%E9%9D%A2%E8%AF%95%E5%88%B7%E9%A2%98/" class="post-title-link" itemprop="url">面试刷题</a>
         </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-08-13 21:17:00" itemprop="dateCreated datePublished" datetime="2019-08-13T21:17:00+08:00">2019-08-13</time>
-    </span>
+              <time title="创建时间：2019-08-13 21:17:00" itemprop="dateCreated datePublished" datetime="2019-08-13T21:17:00+08:00">2019-08-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-11 01:58:39" itemprop="dateModified" datetime="2024-06-11T01:58:39+08:00">2024-06-11</time>
+              </span>
 
-  
-</div>
+          
 
         </div>
       </header>
@@ -271,6 +189,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
+
+      
           <h1 id="Binary-Tree-based-Recursion-amp-Divide-Conquer-二叉树递归与分治"><a href="#Binary-Tree-based-Recursion-amp-Divide-Conquer-二叉树递归与分治" class="headerlink" title="Binary Tree based Recursion &amp; Divide Conquer 二叉树递归与分治"></a>Binary Tree based Recursion &amp; Divide Conquer 二叉树递归与分治</h1><h3 id="226-Invert-Binary-Tree-Easy"><a href="#226-Invert-Binary-Tree-Easy" class="headerlink" title="226. Invert Binary Tree (Easy)"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/invert-binary-tree/description/">226. Invert Binary Tree (Easy)</a></h3><p>Invert a binary tree.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Example:</span><br><span class="line">Input:</span><br><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  2     7</span><br><span class="line"> / \   / \</span><br><span class="line">1   3 6   9</span><br><span class="line">Output:</span><br><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  7     2</span><br><span class="line"> / \   / \</span><br><span class="line">9   6 3   1</span><br></pre></td></tr></table></figure>
 <p>Trivia:<br>This problem was inspired by this original tweet by Max Howell:<br>Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.</p>
@@ -313,11 +233,9 @@
     
     
     
-
-    <footer class="post-footer">
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
   
   
@@ -330,7 +248,7 @@
     <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/05/03/201805-osaka-kyoto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
     </span>
@@ -338,28 +256,30 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="汤包个人页">
     </span>
-
-    
-    
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
             <a href="/2018/05/03/201805-osaka-kyoto/" class="post-title-link" itemprop="url">2018年五一假期日本大阪京都奈良6日游</a>
         </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2018-05-04 12:10:23" itemprop="dateCreated datePublished" datetime="2018-05-04T12:10:23+08:00">2018-05-04</time>
-    </span>
+              <time title="创建时间：2018-05-04 12:10:23" itemprop="dateCreated datePublished" datetime="2018-05-04T12:10:23+08:00">2018-05-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-16 07:09:18" itemprop="dateModified" datetime="2021-02-16T07:09:18+08:00">2021-02-16</time>
+              </span>
 
-  
-</div>
+          
 
         </div>
       </header>
@@ -368,6 +288,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
+
+      
           <p>##前言</p>
 <p>这次五一出行非常不易。 大家平时很忙， 没空做功课， 一路上状况（坑）也很多。<br>首先，五一出行就很贵。 有人的护照在元旦去泰国以后就过期了。 一直到出发前个把月才办到新护照。 订机票需要输入护照号， 拿到新护照才知道护照号。等到出发前三周左右拿到新办好的护照，机票已经没有太多选择了。 我们在去哪网买了一个往返价格￥2873 从韩国转机的红眼航班，毕竟五一，有这个价格已经是较便宜的了。但是，这里埋下出发前的巨大一个坑，随后会介绍。 由于我们没有做功课， 不是很确定要住哪里。 直到出发前两周不到才订了第一晚的酒店：Hotel Brighton City Osaka Kitahama。 住下来这家酒店性价比还是不错。后来听说京都比较好玩就在出发前三天订了三天京都的酒店。 Hotel MyStays Kyoto-Shijo。</p>
 <h2 id="行程"><a href="#行程" class="headerlink" title="行程"></a>行程</h2><h3 id="4-月-28"><a href="#4-月-28" class="headerlink" title="4 月 28"></a>4 月 28</h3><h3 id="4-月-29"><a href="#4-月-29" class="headerlink" title="4 月 29"></a>4 月 29</h3><h3 id="4-月-30"><a href="#4-月-30" class="headerlink" title="4 月 30"></a>4 月 30</h3><h3 id="5-月-1"><a href="#5-月-1" class="headerlink" title="5 月 1"></a>5 月 1</h3><h3 id="5-月-2"><a href="#5-月-2" class="headerlink" title="5 月 2"></a>5 月 2</h3><h3 id="5-月-3"><a href="#5-月-3" class="headerlink" title="5 月 3"></a>5 月 3</h3><p>大阪吃吃吃， 买买买。然后回北京~</p>
@@ -395,11 +317,9 @@
     
     
     
-
-    <footer class="post-footer">
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
   
   
@@ -412,7 +332,7 @@
     <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/21/solidity-smart-contract/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
     </span>
@@ -420,28 +340,30 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="汤包个人页">
     </span>
-
-    
-    
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
             <a href="/2018/04/21/solidity-smart-contract/" class="post-title-link" itemprop="url">一个简单的以太坊智能合约开发练习</a>
         </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2018-04-22 14:40:19" itemprop="dateCreated datePublished" datetime="2018-04-22T14:40:19+08:00">2018-04-22</time>
-    </span>
+              <time title="创建时间：2018-04-22 14:40:19" itemprop="dateCreated datePublished" datetime="2018-04-22T14:40:19+08:00">2018-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-16 07:16:30" itemprop="dateModified" datetime="2021-02-16T07:16:30+08:00">2021-02-16</time>
+              </span>
 
-  
-</div>
+          
 
         </div>
       </header>
@@ -450,6 +372,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
+
+      
           <p>以太坊 V 神在一个采访中说过， 世界上现在分成两种人， 一种是知道什么是比特币的， 一种是不知道的。 对于知道什么是比特币的人， 解释以太坊是什么要相对容易一些。 就是比特币基础上再加了一个智能合约。 对于不知道什么是比特币的， 可以先在网上科普一下。 </p>
 <p>最近几天把 hackernoon 上面的一篇以太坊智能合约开发指南教程跑了一遍。 开发的例子灵感是来自于一部电影<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/4924142/">时间规划局</a>。 一部褒贬不一的电影， 但是我挺喜欢的， 题材不错。 就是未来世界，钱就是时间。 所有人的身体都可以定格在 25 岁， 能活多久取决于左手上的计时器。 穷人就得每天打工赚取活下去的时间， 富人就有很多时间 / 钱。 </p>
 <p>说回智能合约， 这个智能合约就是很简单的比大小。 两个玩家， 在任何一轮玩家一号打入智能合约的钱是玩家二号打入的两倍或以上的话， 游戏结束，合约里所有的钱就归玩家一号。 反之亦然。 如两倍以内， 则进入下一轮。 每轮双方只能打一次钱进入合约。</p>
@@ -475,11 +399,9 @@
     
     
     
-
-    <footer class="post-footer">
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
   
   
@@ -492,7 +414,7 @@
     <link itemprop="mainEntityOfPage" href="http://ahtang.com/2018/04/18/hello-world-round-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
     </span>
@@ -500,28 +422,30 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="汤包个人页">
     </span>
-
-    
-    
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
             <a href="/2018/04/18/hello-world-round-2/" class="post-title-link" itemprop="url">世界你好</a>
         </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2018-04-19 00:26:39" itemprop="dateCreated datePublished" datetime="2018-04-19T00:26:39+08:00">2018-04-19</time>
-    </span>
+              <time title="创建时间：2018-04-19 00:26:39" itemprop="dateCreated datePublished" datetime="2018-04-19T00:26:39+08:00">2018-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-16 07:18:38" itemprop="dateModified" datetime="2021-02-16T07:18:38+08:00">2021-02-16</time>
+              </span>
 
-  
-</div>
+          
 
         </div>
       </header>
@@ -530,6 +454,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
+
+      
           <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>刚要提笔却又觉得无从说起。 还是用我擅长的流水账手法吧。 从很多年前大学甚至高中开始就想有自己的个人主页。 事实是这些年确实都有。 但是由于很多原因没有坚持写。 我爸一直鼓励我多写。 而基于多年的学校教育和我对自身学习方法的认知， 如果我不记笔记， 知识就没有内化，没有充分理解。 写到这里，我想起了大学毕业的一个小遗憾。 当时从比利时搬家回上海， 为了轻车简从，把大学期间打印的讲义和笔记都扔掉了， 堆砌起来目测可能有将近一立方米， 可惜没有照片，现在也是口说无凭。 只能作为永远的遗憾和后辈们引以为鉴的教训了。 </p>
 <p>一直没有去写的另一个原因是， 写的东西都零散的散落在互联网的各个阴暗角落。 从 blogger 到 msn space 再到简书。互联网告诉我们，没有任何的平台是永生的。 那为什么要为了这种转瞬即逝的东西去耗费时间精力去写呢？</p>
 <p>很惭愧，作为一个科班出身的人， 一直到最近我才开始较频繁的使用程序员神器之一 github。 发现这么些年来， 加入版本管理和云存储的东西永生的几率是最大的。 移动硬盘可能摔坏， 优盘可能丢失。 </p>
@@ -553,11 +479,9 @@
     
     
     
-
-    <footer class="post-footer">
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
   
   
@@ -568,7 +492,8 @@
 
 
 
-      
+          </div>
+          
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -577,7 +502,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -586,41 +511,115 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
+      let commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-  </main>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      
 
-      
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
 
 <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
-    <i class=""></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder"></span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
-    </div>
-  </footer>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
 
   
 
@@ -630,15 +629,6 @@
 
 
 
-
-
-
-
-
-
-
-
-  
 
 
 
