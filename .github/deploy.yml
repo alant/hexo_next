@@ -3,7 +3,7 @@ name: Deploy Eleventy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your default branch if different
+      - src
 
 jobs:
   build-and-deploy:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2
+        with:
+          ref: src
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -29,4 +31,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          publish_branch: master
           cname: ahtang.com  # Automatically creates/updates the CNAME file
